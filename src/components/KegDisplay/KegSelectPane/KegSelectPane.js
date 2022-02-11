@@ -12,6 +12,7 @@ function KegSelectPane(props) {
       <div style={KegSelectPaneStyles}>
         {props.kegs.map(keg => 
           <KegItem keg={keg}
+          key={keg.id}
           updateSelectedKeg={props.updateSelectedKeg}/>
         )}
       </div>
