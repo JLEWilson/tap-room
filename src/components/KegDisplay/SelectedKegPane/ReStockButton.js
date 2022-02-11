@@ -16,11 +16,11 @@ function RestockButton(props) {
     event.preventDefault();
     const kegToReorder = {
       id: v4(),
-          name: props.selectedKeg.name,
-          brand: props.selectedKeg.brand,
-          price:props.selectedKeg.price,
-          abv: props.selectedKeg.abv,
-          pints: 124
+      name: props.selectedKeg.name,
+      brand: props.selectedKeg.brand,
+      price:props.selectedKeg.price,
+      abv: props.selectedKeg.abv,
+      pints: 124
     }
     props.newKeg(kegToReorder);
   }
