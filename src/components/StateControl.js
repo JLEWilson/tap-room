@@ -3,6 +3,7 @@ import reactDom from "react-dom";
 import {v4} from "uuid";
 import Header from "./Header";
 import KegDisplay from "./KegDisplay/KegDisplay";
+import Container from 'react-bootstrap/Container';
 
 class StateControl extends React.Component {
   constructor(props){
@@ -98,8 +99,10 @@ class StateControl extends React.Component {
 
     return (
       <React.Component>
-        <Header/>
-        {currentPage}
+        <Container>
+          <Header/>
+          {currentPage}
+        </Container>
       </React.Component>
     );
   }
