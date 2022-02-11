@@ -1,5 +1,4 @@
 import React from "react";
-import reactDom from "react-dom";
 import {v4} from "uuid";
 import Header from "./Header";
 import KegDisplay from "./KegDisplay/KegDisplay";
@@ -55,12 +54,15 @@ class StateControl extends React.Component {
       ]
     };
   }
+
   updateCurrentPage = (page) => {
     this.setState({currentPage: page});
   };
+
   updateSelectedKeg = (keg) => {
     this.setState({selectedKeg: keg});
   };
+
   removePint = (keg) => {
     let newKegs = [...this.state.kegs];
     let kegToUpdate = newKegs.find(k => k.id === keg.id);
@@ -74,36 +76,41 @@ class StateControl extends React.Component {
     
     this.setState({kegs: newKegs});
   };
+
   addNewKeg = (keg) => {
     let newKegs = [...this.state.kegs];
     keg.id = v4();
     newKegs.push(keg);
     this.setState({kegs: newKegs});
   };
+
   render() {
     let currentPage = null;
 
     switch(this.state.currentPage) { //Leaving as a switch for project scale ability 
       case "home":
         currentPage = <KegDisplay
-        newKeg={this.addNewKeg}
-        sellPint={this.sellPint}
+        kegs={this.kegs}
+        updateSelectedKeg={this.updateSelectedKeg}
         updateCurrentPage={this.updateCurrentPage}/>;
         break;
-      case "newKegForm":
-        currentPage = <NewKegForm
+        case "newKegForm":
+         /* currentPage = <NewKegForm
+        sellPint={this.sellPint}
         newKeg={this.addNewKeg}
-        updateCurrentPage={this.updateCurrentPage}/>;
+        updateCurrentPage={this.updateCurrentPage}/>;*/
+      break;
+      default:
       break;
     }
 
     return (
-      <React.Component>
+      <React.Fragment>
         <Container>
           <Header/>
           {currentPage}
         </Container>
-      </React.Component>
+      </React.Fragment>
     );
   }
 }
