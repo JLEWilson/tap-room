@@ -12,7 +12,7 @@ function NewKegButton(props) {
   }
 
   function onClick() {
-    props.updateCurrentPage("newKegForm");
+    props.newKeg("newKegForm");
   }
 
   return(

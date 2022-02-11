@@ -4,7 +4,8 @@ import NewKegButton from "./NewKegButton";
 
 function KegSelectPane(props) {
   const KegSelectPaneStyles = {
-    backgroundColor: "cyan"
+    backgroundColor: " #A7BEA9",
+    padding: "1em"
   }
 
   return (
@@ -16,7 +17,7 @@ function KegSelectPane(props) {
           updateSelectedKeg={props.updateSelectedKeg}/>
         )}
       </div>
-      <NewKegButton newKeg={props.addNewKeg}
+      <NewKegButton newKeg={props.updateCurrentPage}
       />
     </React.Fragment>
   )
