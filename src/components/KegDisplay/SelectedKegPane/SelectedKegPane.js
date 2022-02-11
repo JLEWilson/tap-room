@@ -21,8 +21,10 @@ function SelectedKegPane(props) {
       <h4>Price per pint: {props.selectedKeg.price}</h4>
       <h4>Pints remaining: {props.selectedKeg.pints}</h4>
     </div>
-    <SellPintButton/>
-    <ReStockButton/>
+    <SellPintButton sellPint={props.sellPint}
+    selectedKeg={props.selectedKeg}/>
+    <ReStockButton newKeg={props.newKeg} 
+    selectedKeg={props.selectedKeg}/>
     </React.Fragment>
   )
 }
