@@ -90,7 +90,7 @@ class StateControl extends React.Component {
     switch(this.state.currentPage) { //Leaving as a switch for project scale ability 
       case "home":
         currentPage = <KegDisplay
-        kegs={this.kegs}
+        kegs={this.state.kegs}
         updateSelectedKeg={this.updateSelectedKeg}
         updateCurrentPage={this.updateCurrentPage}/>;
         break;
