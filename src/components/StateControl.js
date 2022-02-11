@@ -1,6 +1,8 @@
 import React from "react";
 import reactDom from "react-dom";
 import {v4} from "uuid";
+import Header from "./Header";
+import KegDisplay from "./KegDisplay/KegDisplay";
 
 class StateControl extends React.Component {
   constructor(props){
@@ -102,3 +104,5 @@ class StateControl extends React.Component {
     );
   }
 }
+
+export default StateControl;
