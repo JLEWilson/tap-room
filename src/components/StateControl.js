@@ -3,6 +3,7 @@ import {v4} from "uuid";
 import Header from "./Header";
 import KegDisplay from "./KegDisplay/KegDisplay";
 import Container from 'react-bootstrap/Container';
+import NewKegForm from "./NewKegForm";
 
 class StateControl extends React.Component {
   constructor(props){
@@ -98,10 +99,10 @@ class StateControl extends React.Component {
         selectedKeg={this.state.selectedKeg}/>;
         break;
         case "newKegForm":
-         /* currentPage = <NewKegForm
+         currentPage = <NewKegForm
         sellPint={this.sellPint}
         newKeg={this.addNewKeg}
-        updateCurrentPage={this.updateCurrentPage}/>;*/
+        updateCurrentPage={this.updateCurrentPage}/>;
       break;
       default:
       break;
