@@ -16,7 +16,9 @@ function KegDisplay(props){
   if (props.selectedKeg === null) {
     kegPane = <h2 style={noSelectionStyle}>Please select a keg.</h2> 
   } else {
-    kegPane = <SelectedKegPane selectedKeg={props.selectedKeg}/>
+    kegPane = <SelectedKegPane selectedKeg={props.selectedKeg}
+                sellPint={props.sellPint}
+                newKeg={props.newKeg}/>
   }
   return(
     <React.Fragment>
@@ -25,8 +27,6 @@ function KegDisplay(props){
           <KegSelectPane
           kegs={props.kegs}
           updateCurrentPage={props.updateCurrentPage}
-          sellPint={props.sellPint}
-          newKeg={this.addNewKeg}
           updateSelectedKeg={props.updateSelectedKeg}/>
         </Col>
         <Col className="col-8">

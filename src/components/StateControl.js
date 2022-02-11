@@ -93,6 +93,7 @@ class StateControl extends React.Component {
         kegs={this.state.kegs}
         updateSelectedKeg={this.updateSelectedKeg}
         updateCurrentPage={this.updateCurrentPage}
+        sellPint={this.removePint}
         newKeg={this.addNewKeg}
         selectedKeg={this.state.selectedKeg}/>;
         break;

@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import { v4 } from 'uuid';
 
 function RestockButton(props) {
-  const RestockButtonStyles = {
+  const restockButtonStyles = {
     width: "5em"
   }
   const centerButton = {
@@ -29,7 +29,7 @@ function RestockButton(props) {
     <React.Fragment>
       <form onSubmit={handleAddKegFormSubmission}>
         <div style={centerButton}>
-          <Button variant="dark" >Restock This Keg</Button>
+          <Button type="submit" variant="dark" style={restockButtonStyles}>Restock This Keg</Button>
         </div>
       </form>
     </React.Fragment>
