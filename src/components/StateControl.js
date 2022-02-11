@@ -1,10 +1,12 @@
 import React from "react";
+import reactDom from "react-dom";
 import {v4} from "uuid";
 
 class StateControl extends React.Component {
   constructor(props){
     super(props);
     this.state = {
+      currentPage: "home",
       selectedKeg: null,
       kegs: [
         {
@@ -49,22 +51,54 @@ class StateControl extends React.Component {
         }
       ]
     };
+  }
+  updateCurrentPage = (page) => {
+    this.setState({currentPage: page});
+  };
+  updateSelectedKeg = (keg) => {
+    this.setState({selectedKeg: keg});
+  };
+  removePint = (keg) => {
+    let newKegs = [...this.state.kegs];
+    let kegToUpdate = newKegs.find(k => k.id === keg.id);
 
-    updateSelectedKeg = (keg) => {
-      this.setState({selectedKeg: keg});
-    };
-    removePint = (keg) => {
-      let newKegs = [...this.state.kegs];
-      let kegToUpdate = newKegs.find(k => k.id === keg.id);
-
-      if(kegToUpdate.pints === 1){
-        newKegs.splice(
-          newKegs.indexOf(kegToUpdate, 1));
-      } else {
-        kegToUpdate.pints -= 1;
-      }
-      
-      this.setState({kegs: newKegs});
+    if(kegToUpdate.pints === 1){
+      newKegs.splice(
+        newKegs.indexOf(kegToUpdate, 1));
+    } else {
+      kegToUpdate.pints -= 1;
     }
+    
+    this.setState({kegs: newKegs});
+  };
+  addNewKeg = (keg) => {
+    let newKegs = [...this.state.kegs];
+    keg.id = v4();
+    newKegs.push(keg);
+    this.setState({kegs: newKegs});
+  };
+  render() {
+    let currentPage = null;
+
+    switch(this.state.currentPage) { //Leaving as a switch for project scale ability 
+      case "home":
+        currentPage = <KegDisplay
+        newKeg={this.addNewKeg}
+        sellPint={this.sellPint}
+        updateCurrentPage={this.updateCurrentPage}/>;
+        break;
+      case "newKegForm":
+        currentPage = <NewKegForm
+        newKeg={this.addNewKeg}
+        updateCurrentPage={this.updateCurrentPage}/>;
+      break;
+    }
+
+    return (
+      <React.Component>
+        <Header/>
+        {currentPage}
+      </React.Component>
+    );
   }
 }
