@@ -15,7 +15,7 @@ class StateControl extends React.Component {
           id: v4(),
           name: "Carina Peach Sour",
           brand: "Ecliptic",
-          price: 700,//in pennies so we can avoid floating point errors
+          price: 7.00,
           abv: 5,
           pints: 124
         },
@@ -23,7 +23,7 @@ class StateControl extends React.Component {
           id: v4(),
           name: "Bud Light",
           brand: "Anheuser–Busch",
-          price: 600,//in pennies so we can avoid floating point errors
+          price: 6.00,
           abv: 5,
           pints: 124
         },
@@ -31,7 +31,7 @@ class StateControl extends React.Component {
           id: v4(),
           name: "Pabst Blue Ribbon",
           brand: "Pabst Brewing Company",
-          price: 600,//in pennies so we can avoid floating point errors
+          price: 6.00,
           abv: 4.8,
           pints: 124
         },
@@ -39,7 +39,7 @@ class StateControl extends React.Component {
           id: v4(),
           name: "Notorious Triple Ipa",
           brand: "Boneyard Beer Company",
-          price: 800,//in pennies so we can avoid floating point errors
+          price: 8.00,
           abv: 12,
           pints: 100
         },
@@ -47,7 +47,7 @@ class StateControl extends React.Component {
           id: v4(),
           name: "Atlas Blackberry Cider",
           brand: "Atlas Cider Company",
-          price: 700,//in pennies so we can avoid floating point errors
+          price: 7.00,
           abv: 6.2,
           pints: 64
         }
@@ -92,7 +92,9 @@ class StateControl extends React.Component {
         currentPage = <KegDisplay
         kegs={this.state.kegs}
         updateSelectedKeg={this.updateSelectedKeg}
-        updateCurrentPage={this.updateCurrentPage}/>;
+        updateCurrentPage={this.updateCurrentPage}
+        newKeg={this.addNewKeg}
+        selectedKeg={this.state.selectedKeg}/>;
         break;
         case "newKegForm":
          /* currentPage = <NewKegForm
