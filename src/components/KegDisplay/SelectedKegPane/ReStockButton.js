@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
-import { v4 } from 'uuid';
+import { v4 } from "uuid";
+import PropTypes from "prop-types"
 
 function RestockButton(props) {
   const restockButtonStyles = {
@@ -30,5 +31,8 @@ function RestockButton(props) {
     </React.Fragment>
   )
 }
-
+RestockButton.propTypes = {
+  selectedKeg: PropTypes.object,
+  newKeg: PropTypes.function
+}
 export default RestockButton;

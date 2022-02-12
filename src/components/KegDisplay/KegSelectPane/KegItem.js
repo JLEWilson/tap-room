@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types"; 
 
 function KegItem(props) {
   const kegItemStyles = {
@@ -18,6 +19,10 @@ function KegItem(props) {
       <br/>
     </React.Fragment>
   );
+}
+KegItem.propTypes = {
+  keg: PropTypes.object,
+  updateSelectedKeg: PropTypes.function
 }
 
 export default KegItem;

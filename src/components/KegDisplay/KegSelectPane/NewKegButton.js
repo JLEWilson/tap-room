@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
+import PropoTypes from "prop-types";
 
 function NewKegButton(props) {
   const newKegButtonStyles = {
@@ -24,5 +25,7 @@ function NewKegButton(props) {
     </React.Fragment>
   )
 }
-
+NewKegButton.propTypes = {
+  newKeg: PropTypes.function
+}
 export default NewKegButton;
