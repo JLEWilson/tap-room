@@ -2,10 +2,9 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 
 function SellPintButton(props){
-  const centerButton = {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center"
+  const sellOnePintStyles = {
+    width: "45%",
+    marginRight: "10%"
   }
   
   function onClick(){
@@ -13,11 +12,7 @@ function SellPintButton(props){
   }
 
   return(
-    <React.Fragment>
-      <div style={centerButton}>
-        <Button variant="dark" onClick={onClick}>Sell One Pint</Button>
-      </div>
-    </React.Fragment>
+    <Button style={sellOnePintStyles} variant="dark" onClick={onClick}>Sell One Pint</Button>
   )
 }
 

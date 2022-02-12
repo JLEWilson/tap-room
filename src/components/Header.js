@@ -2,7 +2,8 @@ import React from "react";
 
 function Header(){
   const HeaderStyles = {
-    textAlign: "Center"
+    textAlign: "Center",
+    marginBottom: "2em"
   };
   return(
     <h1 style={HeaderStyles}>Tap Room</h1>

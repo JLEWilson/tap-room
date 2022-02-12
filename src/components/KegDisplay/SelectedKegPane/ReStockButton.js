@@ -4,14 +4,11 @@ import { v4 } from 'uuid';
 
 function RestockButton(props) {
   const restockButtonStyles = {
-    width: "5em"
+    width: "100%"
   }
-  const centerButton = {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center"
+  const formStyles = {
+    width: "45%"
   }
-
   function handleAddKegFormSubmission(event) {
     event.preventDefault();
     const kegToReorder = {
@@ -27,10 +24,8 @@ function RestockButton(props) {
 
   return(
     <React.Fragment>
-      <form onSubmit={handleAddKegFormSubmission}>
-        <div style={centerButton}>
-          <Button type="submit" variant="dark" style={restockButtonStyles}>Restock This Keg</Button>
-        </div>
+      <form onSubmit={handleAddKegFormSubmission} style={formStyles}>
+        <Button type="submit" variant="dark" style={restockButtonStyles}>Restock This Keg</Button>
       </form>
     </React.Fragment>
   )

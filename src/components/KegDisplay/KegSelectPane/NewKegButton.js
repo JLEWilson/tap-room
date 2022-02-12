@@ -3,7 +3,8 @@ import Button from "react-bootstrap/Button";
 
 function NewKegButton(props) {
   const newKegButtonStyles = {
-    width: "5em"
+    width: "25em",
+    marginTop: ".5em"
   }
   const centerButton = {
     display: "flex",
@@ -18,7 +19,7 @@ function NewKegButton(props) {
   return(
     <React.Fragment>
       <div style={centerButton}>
-        <Button variant="dark" onClick={onClick}>Add New Keg</Button>
+        <Button style={newKegButtonStyles} variant="dark" onClick={onClick}>Add New Keg</Button>
       </div>
     </React.Fragment>
   )
