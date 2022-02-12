@@ -69,12 +69,13 @@ class StateControl extends React.Component {
     let kegToUpdate = newKegs.find(k => k.id === keg.id);
 
     if(kegToUpdate.pints === 1){
+      this.setState({selectedKeg: null})
       newKegs.splice(
         newKegs.indexOf(kegToUpdate, 1));
     } else {
       kegToUpdate.pints -= 1;
     }
-    
+     
     this.setState({kegs: newKegs});
   };
 
