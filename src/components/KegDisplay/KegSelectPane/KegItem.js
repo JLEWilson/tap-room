@@ -22,7 +22,7 @@ function KegItem(props) {
 }
 KegItem.propTypes = {
   keg: PropTypes.object,
-  updateSelectedKeg: PropTypes.function
+  updateSelectedKeg: PropTypes.func
 }
 
 export default KegItem;
