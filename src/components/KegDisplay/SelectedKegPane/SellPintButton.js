@@ -18,6 +18,6 @@ function SellPintButton(props){
 }
 SellPintButton.propTypes = {
   selectedKeg: PropTypes.object,
-  sellPint: PropTypes.function
+  sellPint: PropTypes.func
 }
 export default SellPintButton;

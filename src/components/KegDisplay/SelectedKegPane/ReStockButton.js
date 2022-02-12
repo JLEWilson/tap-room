@@ -33,6 +33,6 @@ function RestockButton(props) {
 }
 RestockButton.propTypes = {
   selectedKeg: PropTypes.object,
-  newKeg: PropTypes.function
+  newKeg: PropTypes.func
 }
 export default RestockButton;
