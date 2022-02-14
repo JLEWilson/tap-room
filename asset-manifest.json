@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/tap-room/static/css/main.10db8df8.chunk.css",
-    "main.js": "/tap-room/static/js/main.25187c92.chunk.js",
-    "main.js.map": "/tap-room/static/js/main.25187c92.chunk.js.map",
+    "main.js": "/tap-room/static/js/main.ff317ee0.chunk.js",
+    "main.js.map": "/tap-room/static/js/main.ff317ee0.chunk.js.map",
     "runtime-main.js": "/tap-room/static/js/runtime-main.6c3d4911.js",
     "runtime-main.js.map": "/tap-room/static/js/runtime-main.6c3d4911.js.map",
     "static/css/2.68a81a89.chunk.css": "/tap-room/static/css/2.68a81a89.chunk.css",
@@ -11,7 +11,7 @@
     "static/js/3.b9962ed3.chunk.js": "/tap-room/static/js/3.b9962ed3.chunk.js",
     "static/js/3.b9962ed3.chunk.js.map": "/tap-room/static/js/3.b9962ed3.chunk.js.map",
     "index.html": "/tap-room/index.html",
-    "precache-manifest.f3e469474fee87b066c7bbc3c1df4d4f.js": "/tap-room/precache-manifest.f3e469474fee87b066c7bbc3c1df4d4f.js",
+    "precache-manifest.a322e52dfddaffeff7c7cf38fe1997a2.js": "/tap-room/precache-manifest.a322e52dfddaffeff7c7cf38fe1997a2.js",
     "service-worker.js": "/tap-room/service-worker.js",
     "static/css/2.68a81a89.chunk.css.map": "/tap-room/static/css/2.68a81a89.chunk.css.map",
     "static/css/main.10db8df8.chunk.css.map": "/tap-room/static/css/main.10db8df8.chunk.css.map"
@@ -21,6 +21,6 @@
     "static/css/2.68a81a89.chunk.css",
     "static/js/2.51aca34b.chunk.js",
     "static/css/main.10db8df8.chunk.css",
-    "static/js/main.25187c92.chunk.js"
+    "static/js/main.ff317ee0.chunk.js"
   ]
 }
