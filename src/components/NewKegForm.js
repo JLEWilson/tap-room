@@ -19,21 +19,18 @@ function NewKegForm(props) {
     width: "30%",
     marginTop: ".5%",
   }
-  const insertDecimal = (price) => {
-    return price.slice(0, price.length-2) + "." + price.slice(price.length-2);
-  };
   
   function handleAddKegFormSubmission(event) {
     event.preventDefault();
-    const kegToReorder = {
+    const kegToOrder = {
       id: v4(),
-      name: event.target.name,
-      brand: event.target.brand,
-      price: insertDecimal(event.target.price),
-      abv: event.target.abv,
+      name: event.target.name.value,
+      brand: event.target.brand.value,
+      price: event.target.price.value,
+      abv: event.target.abv.value,
       pints: 124
     }
-    props.newKeg(kegToReorder);
+    props.newKeg(kegToOrder);
     props.updateCurrentPage("home");
   }
 

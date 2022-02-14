@@ -67,15 +67,14 @@ class StateControl extends React.Component {
   removePint = (keg) => {
     let newKegs = [...this.state.kegs];
     let kegToUpdate = newKegs.find(k => k.id === keg.id);
-
+    console.log(kegToUpdate);
     if(kegToUpdate.pints === 1){
       this.setState({selectedKeg: null})
       newKegs.splice(
-        newKegs.indexOf(kegToUpdate, 1));
+        newKegs.indexOf(kegToUpdate), 1);
     } else {
       kegToUpdate.pints -= 1;
     }
-     
     this.setState({kegs: newKegs});
   };
 
@@ -99,8 +98,8 @@ class StateControl extends React.Component {
         newKeg={this.addNewKeg}
         selectedKeg={this.state.selectedKeg}/>;
         break;
-        case "newKegForm":
-         currentPage = <NewKegForm
+      case "newKegForm":
+        currentPage = <NewKegForm
         sellPint={this.sellPint}
         newKeg={this.addNewKeg}
         updateCurrentPage={this.updateCurrentPage}/>;
